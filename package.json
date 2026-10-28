@@ -1,0 +1,15 @@
+{
+  "name": "brandimo-template",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Brandimo website template: static HTML, CSS and vanilla JS",
+  "type": "module",
+  "scripts": {
+    "build": "node build/build.mjs",
+    "serve": "npx --yes serve ."
+  },
+  "devDependencies": {
+    "@fontsource-variable/vazirmatn": "^5.3.0",
+    "@phosphor-icons/core": "^2.1.1"
+  }
+}

@@ -1,0 +1,141 @@
+/* ==========================================================================
+   Brandimo Design System — tokens
+   Single source of truth for color, type, spacing, radius, shadow and the
+   Liquid Glass material. Components must read these variables, never raw hex.
+   Brand values follow the Brandimo brand book (navy #0B1F40, blue #4A84F7,
+   orange #FF7A1A, off-white #F4F6FB). Verify against the official brand book
+   before launch and update here only.
+   ========================================================================== */
+
+:root {
+  /* ---- Brand palette ---------------------------------------------------- */
+  --navy-950: #071630;
+  --navy-900: #0b1f40; /* brand navy */
+  --navy-800: #11295a;
+  --navy-700: #1a3a78;
+
+  --blue-700: #1f4fd1; /* interactive fill: white text passes AA */
+  --blue-600: #2d63e6;
+  --blue-500: #4a84f7; /* brand blue: icons, accents, large shapes */
+  --blue-300: #9dbcfb;
+  --blue-100: #e3ecfe;
+  --blue-50: #f0f5ff;
+
+  --orange-500: #ff7a1a; /* brand orange: sparkle + selected CTAs only */
+  --orange-600: #e8650a;
+  --orange-100: #ffe9d8;
+
+  --white: #fdfeff;
+  --gray-50: #f4f6fb; /* brand off-white */
+  --gray-100: #eaeef6;
+  --gray-200: #dde3ee;
+  --gray-400: #8c97ab;
+  --gray-500: #5f6b82; /* muted text, 5.3:1 on white */
+  --gray-700: #33405a;
+
+  /* ---- Semantic colors -------------------------------------------------- */
+  --bg: var(--gray-50);
+  --surface: var(--white);
+  --surface-tint: var(--blue-50);
+  --text: var(--navy-900);
+  --text-muted: var(--gray-500);
+  --text-soft: var(--gray-700);
+  --text-on-dark: #f3f6fc;
+  --text-on-dark-muted: #b6c3dc;
+  --border: var(--gray-200);
+  --border-strong: #c9d3e4;
+  --accent: var(--blue-700);
+  --accent-hover: var(--blue-600);
+  --highlight: var(--orange-500);
+  --focus-ring: 0 0 0 3px rgba(74, 132, 247, 0.45);
+  --success: #12805c;
+  --danger: #c8322b;
+
+  /* ---- Typography -------------------------------------------------------- */
+  --font-sans: "Vazirmatn Variable", "Vazirmatn", Tahoma, system-ui, sans-serif;
+  --font-latin: "Vazirmatn Variable", "Segoe UI", system-ui, sans-serif;
+
+  --fs-display: clamp(2.15rem, 1.4rem + 2.6vw, 3.5rem);
+  --fs-h1: clamp(1.9rem, 1.4rem + 1.8vw, 2.75rem);
+  --fs-h2: clamp(1.35rem, 1.15rem + 0.7vw, 1.7rem);
+  --fs-h3: 1.125rem;
+  --fs-body: 1rem;
+  --fs-sm: 0.875rem;
+  --fs-xs: 0.78rem;
+
+  --lh-tight: 1.35; /* Persian glyphs need more leading than Latin */
+  --lh-body: 1.95;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 750;
+  --fw-black: 850;
+
+  /* ---- Spacing (4px base) ----------------------------------------------- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+  --sp-20: 80px;
+  --section-gap: clamp(56px, 4vw + 32px, 88px);
+
+  --container: 1240px;
+  --gutter: clamp(16px, 3vw, 32px);
+
+  /* ---- Shape -------------------------------------------------------------
+     Rule: interactive controls are pills, cards are 20px, tiles inside cards
+     are 14px, inputs are 12px. Nothing else. */
+  --r-pill: 999px;
+  --r-card: 20px;
+  --r-card-lg: 28px;
+  --r-tile: 14px;
+  --r-input: 12px;
+
+  /* ---- Elevation (navy-tinted, never black) ----------------------------- */
+  --shadow-xs: 0 1px 2px rgba(11, 31, 64, 0.06);
+  --shadow-sm: 0 4px 14px -6px rgba(11, 31, 64, 0.14);
+  --shadow-md: 0 14px 34px -14px rgba(20, 52, 120, 0.22);
+  --shadow-lg: 0 30px 70px -28px rgba(20, 52, 120, 0.35);
+  --shadow-blue: 0 10px 24px -10px rgba(31, 79, 209, 0.55);
+
+  /* ---- Liquid Glass (web approximation, not Apple's native material) ----- */
+  --glass-blur: 18px;
+  --glass-saturate: 160%;
+  --glass-bg: rgba(255, 255, 255, 0.58);
+  --glass-bg-strong: rgba(255, 255, 255, 0.74);
+  --glass-border: rgba(255, 255, 255, 0.85);
+  --glass-edge: rgba(74, 132, 247, 0.16);
+  --glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 -1px 0 rgba(74, 132, 247, 0.06);
+  --glass-fallback: rgba(250, 252, 255, 0.97);
+
+  --glass-dark-bg: rgba(255, 255, 255, 0.07);
+  --glass-dark-border: rgba(255, 255, 255, 0.16);
+  --glass-dark-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.18);
+
+  /* ---- Motion ------------------------------------------------------------ */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-std: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 160ms;
+  --dur-base: 260ms;
+  --dur-slow: 600ms;
+
+  /* ---- Layers ------------------------------------------------------------ */
+  --z-header: 40;
+  --z-drawer: 60;
+  --z-modal: 80;
+}
+
+/* Mobile: lighter blur keeps scrolling smooth on mid-range phones. */
+@media (max-width: 767px) {
+  :root {
+    --glass-blur: 10px;
+    --glass-saturate: 140%;
+  }
+}
